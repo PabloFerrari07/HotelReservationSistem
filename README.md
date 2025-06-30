@@ -1,87 +1,39 @@
-🏨 Sistema de Reservas de Hotel – C# .NET API
-Este proyecto es una API RESTful desarrollada con C# y .NET que permite gestionar reservas de habitaciones en un hotel. Incluye autenticación con JWT, control de roles (cliente/admin), validaciones con FluentValidation, lógica de negocio estructurada en servicios, y una arquitectura escalable para futuras expansiones.
+#  Hotel Reservation System.
 
-🚀 Funcionalidades implementadas
-✅ Autenticación y usuarios
-Registro con validación de campos y rol automático (cliente/admin).
+Este es un sistema de reservas de habitaciones de hotel desarrollado como proyecto personal para aprender y demostrar habilidades en **C# .NET 8** para el backend y **React + Axios + Tailwind CSS** para el frontend.
 
-Login con generación de token JWT.
+---
 
-Gestión de usuarios (solo admin): ver, editar, eliminar.
+##  Descripción.
 
-✅ Reservas de habitaciones
-Crear reserva si hay disponibilidad.
+El sistema permite a los usuarios:
+- Registrarse e iniciar sesión con **autenticación JWT**.
+- Ver habitaciones disponibles.
+- Realizar reservas.
+- Consultar el historial de reservas.
+- Modificar reservas activas (si está permitido).
+- Contar con roles: **cliente** (usuarios) y **administrador** (gestiona habitaciones y usuarios).
 
-Cancelar reserva si está activa.
+El administrador puede:
+- Crear, editar y eliminar habitaciones.
+- Gestionar usuarios y sus permisos.
+- Visualizar reservas de todos los usuarios.
 
-Ver reservas por usuario (historial con estados: activas, canceladas, finalizadas).
+---
 
-Ver próximas reservas personales.
+## ⚙️ Tecnologías utilizadas.
 
-Dashboard del usuario con resumen de actividad.
+### Backend.
+- **C# .NET 8**
+- **Entity Framework Core**
+- **SQL Server**
+- **JWT Authentication**
+- **Validators**
 
-✅ Habitaciones
-Crear, editar y eliminar habitaciones (admin).
+### Frontend.
+- **React**
+- **Axios**
+- **Tailwind CSS**
+- **React Router**
 
-Validación para evitar números de habitación duplicados.
-
-Consultar habitaciones disponibles entre fechas.
-
-✅ Panel de administración (Admin)
-Ver historial de reservas de todos los usuarios.
-
-Filtrar reservas por usuario, estado, fecha y habitación.
-
-Ver ocupación del hotel por fecha (habitaciones reservadas por día).
-
-⚙️ Tecnologías y herramientas
-.NET 8
-
-Entity Framework Core
-
-JWT (JSON Web Tokens)
-
-FluentValidation
-
-SQL Server
-
-AutoMapper
-
-Arquitectura por capas (Controller - Service - DTO - Model - Validator)
-
-│
-├── Controllers
-│   ├── AuthController.cs
-│   ├── ReservaController.cs
-│   └── HabitacionController.cs
-│
-├── Services
-│   ├── UsuarioService.cs
-│   ├── ReservaService.cs
-│   └── HabitacionService.cs
-│
-├── Dtos
-│   ├── RegistroDto.cs
-│   ├── LoginDto.cs
-│   ├── HabitacionDto.cs
-│   ├── ReservaDto.cs
-│   └── ...
-│
-├── Validators
-│   ├── RegisterValidator.cs
-│   ├── HabitacionValidator.cs
-│   └── ReservaValidator.cs
-│
-├── Models
-│   ├── Usuario.cs
-│   ├── Reserva.cs
-│   └── Habitacion.cs
-│
-└── Program.cs
-
-
-
-🔒 Roles disponibles
-admin: acceso total (reservas, usuarios, habitaciones, estadísticas).
-
-cliente: solo puede ver sus reservas, perfil y habitaciones disponibles.
+---
